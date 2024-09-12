@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=alpine:3.19
+ARG BASE_IMAGE=ubuntu:22.04
 FROM ${BASE_IMAGE}
 
 LABEL org.opencontainers.image.authors="Chris Romp"
@@ -11,8 +11,8 @@ RUN apk update && \
     bash buildah ca-certificates curl git gnupg jq less make nodejs npm openssl unzip vim wget zip sudo iproute2 bind-tools python3 py3-pip && \
     rm -rf /var/cache/apk/*
 
-# Download and install VS Code CLI
-RUN curl -sSLf 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' \
+# Download and install VS Code CLI for ARM64
+RUN curl -sSLf 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-arm64' \
     --output /tmp/vscode-cli.tar.gz && \
     tar -xf /tmp/vscode-cli.tar.gz -C /usr/local/bin && \
     rm -f /tmp/vscode-cli.tar.gz

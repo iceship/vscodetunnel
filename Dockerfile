@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ubuntu:22.04
+ARG BASE_IMAGE=alpine:3.19
 FROM ${BASE_IMAGE}
 
 LABEL org.opencontainers.image.authors="Chris Romp"

@@ -52,7 +52,7 @@ WORKDIR ${VSCODE_WORKSPACE_DIR}
 VOLUME [ "${VSCODE_WORKSPACE_DIR}" ]
 
 # Authentication provider for tunnel server: microsoft, github
-ENV VSCODE_TUNNEL_AUTH=microsoft
+ENV VSCODE_TUNNEL_AUTH=github
 
 # Optional "dev tunnel" token for authentication so you can skip tunnel auth
 # https://learn.microsoft.com/en-us/azure/developer/dev-tunnels
